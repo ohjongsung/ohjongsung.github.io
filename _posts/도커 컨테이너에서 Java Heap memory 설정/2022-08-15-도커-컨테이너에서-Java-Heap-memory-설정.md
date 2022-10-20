@@ -1,4 +1,4 @@
-##Java Container Heap Memory 설정 변화 흐름
+## Java Container Heap Memory 설정 변화 흐름
 
 ### JDK 8u131+, JDK 9
 컨테이너에 할당된 메모리의 25% 를 힙 메모리로 할당한다.
