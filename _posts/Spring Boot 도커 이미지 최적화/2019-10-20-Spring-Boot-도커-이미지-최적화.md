@@ -4,13 +4,13 @@ JAVA, 그러니까 Spring Application 을 도커 이미지로 만들어 보면, 
 
 알파인 리눅스는 가볍고 간단하고 보안성을 목적으로 개발한 리눅스 배포판이다.
 
-![Docker_Image_Size](Docker_Image_Size.png)
+![Docker_Image_Size](/assets/img/upload/Docker_Image_Size.png)
 
 ### Java 알파인 이미지
 
 alpine linux를 기본으로 해서, 애플리케이션 구동을 위한 이미지들이 이미 많이 있는데, java의 경우 openjdk 기반의 다양한 이미지가 있다.
 
-![Java_Image_Size](Java_Image_Size.PNG)
+![Java_Image_Size](/assets/img/upload/Java_Image_Size.PNG)
 
 이미지 사이즈를 보면 사이즈 차이가 많이 나는데, adoptopenjdk/openjdk{version}:alpine-jre 를 사용하는 것이 좋다. slim prefix가 붙은 이미지의 사이즈가 가장 작은데, 이는 openjdk  -headless 패키지를 사용한 것으로 자바 런타임 환경에서 필요한 최소한의 패키지만 설치되어 있다. 그러나 openjdk 만 사용되고 공간 제약이 있는 경우에만 사용해야 한다. 그 외에 추가로 실행되어야 하는 agent 나 daemon 이 있는 경우, 실행이 안될 가능성이 높아 테스트가 필요하다.
 

@@ -1,3 +1,7 @@
+---
+tags: [prometheus]
+---
+
 사내 K8S에서 운영하는 프로메테우스가 힘들어해서 스케일링이 필요해졌다. 메트릭 데이터를 외부에 저장해서 제공하기로 했다.
 
 [Integrations](https://prometheus.io/docs/operating/integrations/)
@@ -6,7 +10,7 @@
 
 ### elasticsearch
 
-![prometheus-es](prometheus-es.png)
+![prometheus-es](/assets/img/upload/prometheus-es.png)
 
 metricbeat 를 활용해서 prometheus 의 metric data 를 elasticsearch 로 저장하는 방법을 먼저 해보았다.
 
@@ -22,7 +26,7 @@ metricbeat 는 사용하고 있는 kibana version 에 맞춰서 설치해야 한
 
 결과
 
-![esjson](esjson.png)
+![esjson](/assets/img/upload/esjson.png)
 
 metric data 한 건당 document 가 하나씩 생긴다. 중복 데이터가 어마어마하게 쌓인다고 보면 된다. 조금 더 파고 들면 개선시킬 수도 있겠지만 여기서 일단 중단
 
@@ -36,7 +40,7 @@ metric data 한 건당 document 가 하나씩 생긴다. 중복 데이터가 어
 
 모든 Prometheus Server는 자신이 수집한 Metric을 외부에서 가져갈 수 있도록 /federate URL을 제공
 
-![federation](federation.png)
+![federation](/assets/img/upload/federation.png)
 
 설정
 

@@ -9,7 +9,7 @@ meta-circular 스타일이란 언어를 실행하는 환경과 코드를 개발�
 
 ## GraalVM 개발 사이클
 
-![devcycle](devcycle.png)
+![devcycle](/assets/img/upload/devcycle.png)
 
 GraalVM의 JVMCI, AOT, Graal JIT이 위 그림과 같이 새로운 기법을 JEP-243, JEP-295, JEP-317로 정의하여 OpenJDK에 적용하고 있다. GraalVM에서 개발되고 검증된 이러한 기술은 OpenJDK에 적용되어 표준 자바에 추가된다. 그리고 OpenJDK에 적용된 기술은 결과적으로 Oracle Java에 반영된다.
 
@@ -24,11 +24,11 @@ GraalVM의 JVMCI, AOT, Graal JIT이 위 그림과 같이 새로운 기법을 JEP
 
 GraalVM 이 Hotspot 전체를 java 로 작성한 것을 뜻하지 않는다. C2 컴파일러와 HotspotVM 과 통신하는 컴파일러 인터페이스 부분을 java로 다시 작성된 부분이 포함된 것을 GraalVM 이라고 한다.
 
-![hotspotvm](hotspotvm.jpg)
+![hotspotvm](/assets/img/upload/hotspotvm.jpg)
 
 여기서 C2 컴파일러를 Graal 이라고 말한다. 가끔 GraalVM 과 Graal 을 똑같은 의미로 생각하는 사람들이 있는데, 그렇지 않다.
 
-![graalvm](graalvm.jpg)
+![graalvm](/assets/img/upload/graalvm.jpg)
 
 ## Graal 의 성능
 
@@ -112,10 +112,10 @@ total: 69999993 (4443 ms)
 
 앞서 설명한 개발 사이클을 보면, GraalVM 에 적용된 기능이 openJDK 에도 추가되는 것을 확인했다.
 JVMCI 는 openJDK 9 에서부터,
-![jvmci](jvmci.jpg)
+![jvmci](/assets/img/upload/jvmci.jpg)
 
 Graal 은 openJDK 10 에서부터 사용가능해졌다.
-![graal](graal.jpg)
+![graal](/assets/img/upload/graal.jpg)
 
 ### JAVA 10 에서 사용법
 

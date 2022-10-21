@@ -17,7 +17,7 @@ CAP 이론은 분산 데이터베이스 시스템에서 의미있는 이론이�
 
 ## CAP 이론
 아래의 그림을 보자. CAP 세 가지 속성을 모두 만족하는 부분은 존재하지 않는다. 즉, 분산 시스템에서 이 세가지 속성을 모두 만족하는 것은 불가능하며, 오직 2 가지만 만족할 수 있다로 정리된다.
-![CAP theorem](truth-of-cap-theorem-diagram.png)
+![CAP theorem](/assets/img/upload/truth-of-cap-theorem-diagram.png)
 
 ## CAP 이론의 허점
 앞선 내용으로 우리가 동시에 가질 수 있는 CAP 속성은 CP, AP, CA 이렇게 세 가지로 나눌수 있다.
@@ -30,11 +30,11 @@ CAP 이론은 분산 데이터베이스 시스템에서 의미있는 이론이�
 
 ## PACELC 이론
 PACELC 이론은 CAP 이론으로 부족한 부분을 보완하기위해 네트워크 장애 상황과 정상 상황으로 나누어서 설명하는 이론이다. 아래의 그림을 보자. **P(네트워크 파티션)상황에서 A(가용성)과 C(일관성)의 상충 관계와 E(else, 정상)상황에서 L(지연 시간)과 C(일관성)의 상충 관계를 설명한다.**
-![PACELC theorem](truth-of-cap-theorem-pacelc.jpg)
+![PACELC theorem](/assets/img/upload/truth-of-cap-theorem-pacelc.jpg)
 PACELC 이론에서는 장애 상황, 정상 상황에서 어떻게 동작하는지에 따라 시스템을 **PC/EC, PC/EL, PA/EC, PA/EL**로 나눌 수 있다. MySQL을 예로 들자면, 마스터-슬레이브로 구성된 MySQL 서버는 기본적으로 PA/EL이다. 예전에 MySQL에 쓰기 작업을 끝내자 마자 읽으려고 했다가 데이터가 없어서 당황했던 적이 있다. 즉 E(else, 정상)상황에서 L(지연 시간)을 C(일관성)보다 집중해서 일어난 케이스이다. 알고보니 MySQL은 따로 설정하지 않으면 마스터에 트랜잭션 발생시 비동기적으로 슬레이브에 데이터를 복제(async replication)한다고 한다. 그래서 복제될 때까지 딜레이를 주고 접근하게 코드를 수정했었다.
 
 ### PACELC 이론에 따른 NoSQL 분류
-![PACELC nosql](pacelc-scheme.png)
+![PACELC nosql](/assets/img/upload/pacelc-scheme.png)
 
 ## Reference
 * http://eincs.com/2013/07/misleading-and-truth-of-cap-theorem/

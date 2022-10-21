@@ -1,6 +1,6 @@
 카프카 클러스터를 최초에 구축할 때, ‘recommend at least 128000 allowed for file descriptors ‘ 라는 가이드를 확인하고, /etc/security/limits.conf 에 적용을 했었다.
 
-![systemd01](systemd01.png)
+![systemd01](/assets/img/upload/systemd01.png)
 
 그런데 사용중에 아래와 같은 에러가 발생했다.
 
@@ -28,7 +28,7 @@ java.io.IOException: Too many open files
 
 Java 기반의 카프카가 MaxFDLimit 에 의해 open files 값을 4096 으로 설정한 것으로 추정되서 확인해봤다.
 
-![systemd02](systemd02.png)
+![systemd02](/assets/img/upload/systemd02.png)
 
 **/etc/security/limits 설정이 반영되지 않은 이유**
 
@@ -38,4 +38,4 @@ Java 기반의 카프카가 MaxFDLimit 에 의해 open files 값을 4096 으�
 
 Systemd 설정에 LimitNOFILE=128000 을 추가해서 카프카 클러스터 재시작해서 해결했다.
 
-![systemd03](systemd03.png)
+![systemd03](/assets/img/upload/systemd03.png)

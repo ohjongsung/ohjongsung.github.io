@@ -29,7 +29,7 @@ public class MyClass {
 
 아래의 그림을 보면 Environment 클래스는 propertySource 의 집합체임을 알 수 있다.
 
-![Environment](picture306-1.png)
+![Environment](/assets/img/upload/picture306-1.png)
 
 예를 들어, propertySourceList 인덱스 0번에 보이는 server.ports propertySource 에 server.port=8080 이라고 설정하고, 인덱스 6 번의 application.yml 에는 server.port=9090으로 설정했다고 하자.
 이런 경우, 아래와 같은 코드를 실행하면 어떤 값이 조회될까?
@@ -46,7 +46,7 @@ environment 클래스는 property 값을 조회할 때, propertySourceList 의 �
 
 환경정보를 어떻게 변경하는지 알았다면, 이제 어떻게 환경정보 변경 이벤트를 Application 에 전달하는지 알아보자. Spring Cloud Bus 는 분산 시스템의 노드를 간단한 메시지 브로커(RabbitMQ , Kafka)와 연결하는 컴포넌트다. MQ 를 사용해본 사람이면 바로 눈치를 챌 것이다. 환경정보 변경 이벤트가 메시지 브로커를 통해 각 Application 에 전달되고 이를 구독하는 서비스 인스턴스들이 각자 Config Server 에 새로운 환경정보를 요청하고 반영하는 구조다.
 
-![Environment](cloud-bus.png)
+![Environment](/assets/img/upload/cloud-bus.png)
 
 ### Spring Framework 3.x ~ 4.x Support
 
