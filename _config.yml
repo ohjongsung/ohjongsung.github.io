@@ -4,8 +4,8 @@ description: >- # site description
   개발 블로그입니다. <a href="https://github.com/ohjongsung/ohjongsung.github.io" target="_blank" rel="noopener">@github</a>.
 lang: en-US # default lang
 timezone: Asia/Seoul # set your timezone
-image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
-repo: https://github.com/piharpi/jekyll-klise # site repo [optional]
+image: # This image used for Open Graph more info https://ogp.me/ 이거 사용안함
+repo: https://github.com/ohjongsung/ohjongsung.github.io # site repo [optional]
 mode: light # default theme "dark" | "light"
 
 # Profile settings
